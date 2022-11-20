@@ -1,0 +1,17 @@
+{
+  "name": "error-handled-node-hmr",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Densyakun/error-handled-node-hmr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Densyakun/error-handled-node-hmr/issues"
+  },
+  "homepage": "https://github.com/Densyakun/error-handled-node-hmr#readme"
+}
