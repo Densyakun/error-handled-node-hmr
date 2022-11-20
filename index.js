@@ -1,14 +1,16 @@
-module.exports = (hmr, handleFile, callbackImported, options, callbackCatch) => {
+module.exports = (hmr, watchFile, callbackImported, callbackPreImport, options, callbackCatch) => {
   hmr(() => {
+    if (callbackPreImport) callbackPreImport()
+
     try {
-      const importedModule = require(handleFile)
+      const importedModule = require(watchFile)
 
       if (callbackImported) callbackImported(importedModule)
     } catch (e) {
       callbackCatch ? callbackCatch(e) : console.error(e)
 
-      const moduleId = require.resolve(handleFile)
+      const moduleId = require.resolve(watchFile)
       require.cache[moduleId] = { id: moduleId }
     }
-  }, { watchFilePatterns: [handleFile], ...options })
+  }, { watchFilePatterns: [watchFile], ...options })
 }
