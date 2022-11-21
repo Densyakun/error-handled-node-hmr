@@ -86,7 +86,7 @@ const fn = importedModule => {
 
 if (dev) {
   const hmr = require('node-hmr')
-  const ehhmr = require('./')
+  const ehhmr = require('error-handled-node-hmr')
 
   var handleFile = './handle.js'
 
