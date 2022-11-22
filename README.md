@@ -2,6 +2,12 @@
 
 Module to handle errors when using [node-hmr](https://github.com/serhiinkh/node-hmr).
 
+## Install
+
+```bash
+npm i error-handled-node-hmr
+```
+
 ## API
 
 ```js
