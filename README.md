@@ -88,7 +88,7 @@ if (dev) {
   const hmr = require('node-hmr')
   const ehhmr = require('error-handled-node-hmr')
 
-  var handleFile = './handle.js'
+  var handleFile = './watched.js'
 
   ehhmr(hmr, handleFile, importedModule => {
     fn(importedModule)
